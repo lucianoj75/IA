@@ -12,10 +12,10 @@ load_dotenv()
 
 cliente = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 modelo = "gpt-4o"
-contexto = carrega("chatbot/dados/ecomart.txt")
+#contexto = carrega("./dados/ecomart.txt")
 
 def pegar_json():
-    filename = "chatbot/assistentes.json"
+    filename = "./assistentes.json"
     
     if not os.path.exists(filename):
         assistant_id = criar_assistente()
@@ -69,9 +69,9 @@ def criar_lista_ids():
     vector_store = cliente.beta.vector_stores.create(name="Docs Ecomart")
     
     # Ready the files for upload to OpenAI
-    file_paths = ["chatbot/dados/dados_ecomart.txt",
-                  "chatbot/dados/políticas_ecomart.txt",
-                  "chatbot/dados/produtos_ecomart.txt"]
+    file_paths = ["./dados/dados_ecomart.txt",
+                  "./dados/políticas_ecomart.txt",
+                  "./dados/produtos_ecomart.txt"]
     file_streams = [open(path, "rb") for path in file_paths]
     
     # Use the upload and poll SDK helper to upload the files, add them to the vector store,

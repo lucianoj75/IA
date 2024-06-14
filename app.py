@@ -27,7 +27,7 @@ STATUS_COMPLETED = "completed"
 STATUS_REQUIRES_ACTION = "requires_action" 
 
 caminho_imagem_enviada = None
-UPLOAD_FOLDER = 'chatbot/dados' 
+UPLOAD_FOLDER = './dados' 
 
 def bot(prompt):
     global caminho_imagem_enviada
