@@ -11,6 +11,7 @@ Aprendizado:
 ## 🔐 API Key
 
 É necessário a criação de uma API key na plataforma da OpenAI. (https://platform.openai.com/api-keys)
+Após criar sua API KEY, informe ela dentro do arquivo .env deste repositório e **atente-se para não compartilhá-lo**.
 
 ## ⚙️ Configuração do Ambiente
 
